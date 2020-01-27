@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+
+    <title>Online Store</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" asp-href-include="~/lib/font-awesome/css/*.css"/>
+</head>
+<body>
+    <div class="navbar navbar-dark bg-dark">
+        <div class="row container-fluid">
+            <div class="col">
+                <a class="navbar-brand" href="#">Clothes online</a>
+            </div>
+            <div class="col" style="text-align:right;">
+                @await Component.InvokeAsync("CartSummary")
+            </div>
+        </div>
+    </div>
+    <div class="row m-1 p-1">
+        <div id="catagories" class="col-3">
+            @await Component.InvokeAsync("NavigationMenu")
+        </div>
+
+
+        <div class="col-9">
+            @RenderBody()
+        </div>
+
+    </div>
+    <footer>
+
+    </footer>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
