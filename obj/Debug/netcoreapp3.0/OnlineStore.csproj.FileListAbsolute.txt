@@ -72,3 +72,8 @@ C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\net
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Cart\Index.cshtml.g.cs
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\CartSummary\Default.cshtml.g.cs
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Order\Checkout.cshtml.g.cs
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Order\Completed.cshtml.g.cs
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Order\List.cshtml.g.cs
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Edit.cshtml.g.cs
