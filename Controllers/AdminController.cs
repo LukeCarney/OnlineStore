@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using OnlineStore.Models;
+using Microsoft.AspNetCore.Authorization;
 
 
 
 namespace OnlineStore.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IProductRepository repository;
@@ -17,6 +19,7 @@ namespace OnlineStore.Controllers
         {
             repository = repo;
         }
+        
         public ViewResult Index()
         {
             return View(repository.Products);

@@ -68,7 +68,6 @@ C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\bin\Debug\net
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\ProductSummary.cshtml.g.cs
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\NavigationMenu\Default.cshtml.g.cs
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
-C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\OnlineStore.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Cart\Index.cshtml.g.cs
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\CartSummary\Default.cshtml.g.cs
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Order\Checkout.cshtml.g.cs
@@ -77,3 +76,10 @@ C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\net
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Edit.cshtml.g.cs
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\OnlineStore.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\obj\Debug\netcoreapp3.0\Razor\Views\Account\Login.cshtml.g.cs

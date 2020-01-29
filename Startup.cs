@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using OnlineStore.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace OnlineStore
 {
@@ -24,7 +25,15 @@ namespace OnlineStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("OnlineStoreProducts")));
+            options.UseSqlServer(Configuration["Data:OnlineStoreProducts:ConnectionString"]));
+
+            services.AddDbContext<IdentityDbContext>(options =>
+            options.UseSqlServer(Configuration["Data:OnlineStoreIdentity:ConnectionString"]));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<IdentityDbContext>()
+                .AddDefaultTokenProviders();
+
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -38,11 +47,16 @@ namespace OnlineStore
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //app.UseHttpsRedirection();
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
             app.UseRouting();
+            app.UseAuthorization();
+            app.UseAuthentication();
+
+            
 
             app.UseEndpoints(endpoints =>
             {
@@ -74,6 +88,7 @@ namespace OnlineStore
             });
 
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }
