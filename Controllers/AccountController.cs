@@ -33,30 +33,42 @@ namespace OnlineStore.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginModel loginModel)
+        public async Task<IActionResult> Login(LoginModel loginModel, string returnUrl)
         {
             if (ModelState.IsValid)
             {
-                IdentityUser user =
-                    await userManager.FindByNameAsync(loginModel.Name);
-                if(user!= null)
+                var result = await signInManager.PasswordSignInAsync(loginModel.Name,
+                        loginModel.Password, false, false);
+                if (result.Succeeded)
                 {
-                    await signInManager.SignOutAsync();
-                    if((await signInManager.PasswordSignInAsync(user, 
-                        loginModel.Password, false, false)).Succeeded)
+                    
+                    if(!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                     {
-                        return Redirect(loginModel?.ReturnUrl ?? "/Admin/Index");
+
+                        return Redirect(returnUrl);
                     }
+                    else
+                    {
+                        return RedirectToAction("Admin", "Index");
+                    }
+                    
+
                 }
             }
             ModelState.AddModelError("", "Invalid name or password");
             return View(loginModel);
         }
-
-        public async Task<RedirectResult> Logout(string returnUrl = "/") 
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<IActionResult> Logout(string returnUrl = "/") 
         {
             await signInManager.SignOutAsync();
-            return Redirect(returnUrl);
+            return Redirect("/");
+        }
+
+        public ViewResult Hello()
+        {
+            return View("Hello everybody");
         }
     }
 }

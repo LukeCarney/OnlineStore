@@ -24,11 +24,12 @@ namespace OnlineStore
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<IdentityDbContext>(options =>
+            options.UseSqlServer(Configuration["Data:OnlineStoreIdentity:ConnectionString"]));
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration["Data:OnlineStoreProducts:ConnectionString"]));
 
-            services.AddDbContext<IdentityDbContext>(options =>
-            options.UseSqlServer(Configuration["Data:OnlineStoreIdentity:ConnectionString"]));
+            
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityDbContext>()
@@ -47,14 +48,15 @@ namespace OnlineStore
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
             app.UseRouting();
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
+            
 
             
 

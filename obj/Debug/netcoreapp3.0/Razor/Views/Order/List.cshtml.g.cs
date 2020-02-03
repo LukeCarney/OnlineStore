@@ -33,8 +33,15 @@ using OnlineStore.Infrastructure;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\carne\OneDrive\Documents\Projects\OnlineStore\OnlineStore\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"51159575291491f588f75d9ced759d5a742a4c64", @"/Views/Order/List.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"708e009771e84a3f63088b9ae0e8e0866d1592ca", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eb4af0f75aa180000d29eb9c567f41723f2c29b4", @"/Views/_ViewImports.cshtml")]
     public class Views_Order_List : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Order>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "MarkShipped", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -108,7 +115,7 @@ using OnlineStore.Infrastructure;
 #line hidden
 #nullable disable
             WriteLiteral("</td><th>Product</th><th>Quantity</th>\r\n                <td>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "51159575291491f588f75d9ced759d5a742a4c645582", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "51159575291491f588f75d9ced759d5a742a4c645793", async() => {
                 WriteLiteral("\r\n                        <input type=\"hidden\" name=\"orderId\"");
                 BeginWriteAttribute("value", " value=\"", 570, "\"", 588, 1);
 #nullable restore

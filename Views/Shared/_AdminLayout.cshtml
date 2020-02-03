@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject SignInManager<IdentityUser> signInManager
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -16,14 +17,31 @@
 <body class="m-1 p-1">
     <div class="bg-info p-2 row">
         <div class="col">
-
             <h4>@ViewBag.Title</h4>
         </div>
-        <div class="col-2">
-            <a class="btn btn-sm btn-primary" asp-action="Logout"
-               asp-controller="Account">Log Out</a>
-        </div>
+        @if (signInManager.IsSignedIn(User))
+        {
+            <div class="col-2">
+                <form asp-action="Logout" asp-controller="Account" method="get">
+                    <button type="submit" class="nav-link btn btn-link py-0" style="width:auto">
+                        Logout @User.Identity.Name
+                    </button>
+                </form>
+            </div>
+        }
+        else
+        {
+            <div class="col-2">
+                <form asp-action="Login" method="post" asp-controller="Account">
+                    <button type="submit" class="nav-link btn btn-link py-0" style="width:auto">
+                        Login
+                    </button>
+                </form>
+            </div>
+
+        }
     </div>
+      
         @if (TempData["message"] != null)
         {
             <div class="alert alert-success">@TempData["message"]</div>
